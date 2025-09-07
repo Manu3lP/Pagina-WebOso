@@ -1,0 +1,33 @@
+.footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 1rem;
+  flex-wrap: wrap;
+
+  .footer-section {
+    flex: 1 1 200px;
+    margin: 0 1rem;
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+
+    .icons {
+      display: flex;
+      gap: 1rem;
+
+      img {
+        width: 24px;
+        height: 24px;
+        filter: brightness(0) invert(1);
+        transition: filter 0.3s;
+
+        &:hover {
+          filter: brightness(0.7) invert(1);
+        }
+      }
+    }
+  }
+}

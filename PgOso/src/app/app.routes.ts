@@ -1,0 +1,18 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { ContactanosComponent } from './pages/contacto/contacto.component';
+import { HomeComponent } from './pages/home/home.component';
+import { NosotrosComponent } from './pages/nosotros/nosotros.component';
+
+export const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'nosotros', component: NosotrosComponent },
+  { path: 'contacto', component: ContactanosComponent },
+  { path: '**', redirectTo: '' } // redirige rutas no definidas al home
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }

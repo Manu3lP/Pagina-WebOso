@@ -1,0 +1,10 @@
+<nav class="navbar">
+  <div class="logo" *ngFor="let logo of Logo">
+  <a routerLink="/"><img [src]="logo.image" alt="Logo"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/nosotros">Nosotros</a></li>
+    <li><a routerLink="/contacto">Contáctanos</a></li>
+  </ul>
+</nav>

@@ -1,0 +1,36 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black ;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  z-index: 1000;
+
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+.logo img {
+  max-width: 100px;   /* nunca más grande que 150px */
+  width: 50%;        /* se adapta al contenedor */
+  height: auto;       /* mantiene proporción */
+}
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+
+    li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

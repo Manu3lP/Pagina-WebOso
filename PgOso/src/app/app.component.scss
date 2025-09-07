@@ -1,0 +1,4 @@
+.main-content {
+  padding-top: 70px; // para que no quede debajo del header fijo
+  min-height: calc(100vh - 140px); // altura menos header y footer
+}

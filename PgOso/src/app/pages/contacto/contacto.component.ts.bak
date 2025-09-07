@@ -1,0 +1,24 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-contactanos',
+  templateUrl: './contactanos.component.html',
+  styleUrls: ['./contactanos.component.scss']
+})
+export class ContactanosComponent {
+  form = {
+    name: '',
+    email: '',
+    message: ''
+  };
+
+  submitted = false;
+
+  onSubmit() {
+    if (this.form.name && this.form.email && this.form.message) {
+      // Aquí podrías enviar el formulario a un backend
+      this.submitted = true;
+      this.form = { name: '', email: '', message: '' };
+    }
+  }
+}

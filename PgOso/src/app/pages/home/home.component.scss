@@ -1,0 +1,110 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+
+  /* Ancho completo de la pantalla */
+  width: 100vw;
+
+  /* Centrado visual con respecto al contenedor */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  /* Opcional: margen superior e inferior para separación */
+  margin-top: 0.77rem;
+  margin-bottom: 2rem;
+
+  /* Quitar cualquier max-width */
+  max-width: none;
+
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+    .slide {
+      min-width: 100%;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .caption {
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0 0.5rem;
+    cursor: pointer;
+    border-radius: 3px;
+    user-select: none;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  button.prev {
+    left: 10px;
+  }
+
+  button.next {
+    right: 10px;
+  }
+}
+
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+
+  .card {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    width: 250px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+      color: #004080;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #333;
+    }
+  }
+}
